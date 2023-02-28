@@ -40,12 +40,13 @@
     </div>
 
     <!-- NAVBAR -->
-    <nav class="sticky-top">
+
+    <!-- <nav class="sticky-top">
       <div id="Nav">
         <div>
-          <ul>
-            <!-- class="nav nav-pills" -->
-            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <ul> -->
+    <!-- class="nav nav-pills" -->
+    <!-- <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
             ✦
             <li><a class="nav-link" href="#About">About Me</a></li>
             ✦
@@ -55,18 +56,27 @@
           </ul>
         </div>
       </div>
-    </nav>
-
-    <!-- <nav id="Nav" class="navbar bg-body-tertiary">
-      <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a class="nav-link" href="#Home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#About">About</a>
-        </li>
-      </ul>
     </nav> -->
+
+    <nav id="Nav" class="sticky-top">
+      <div class="navContainer">
+        <div class="tabs">
+          <input type="radio" id="radio-1" name="tabs" onclick="window.location='#About';" checked />
+          <label class="tab" for="radio-1">About</label>
+
+          <input type="radio" id="radio-2" name="tabs" onclick="window.location='#Project';" />
+          <label class="tab" for="radio-2">Projects</label>
+
+          <input type="radio" id="radio-3" name="tabs" onclick="window.location='#Socials';" />
+          <label class="tab" for="radio-3">Socials</label>
+
+          <!-- <input type="radio" id="radio-4" name="tabs" onclick="window.location='#Socials';" />
+          <label class="tab" for="radio-4">Socials</label> -->
+
+          <span class="glider"></span>
+        </div>
+      </div>
+    </nav>
 
     <!-- ABOUT ME -->
     <div id="About" name="About">
@@ -95,17 +105,17 @@
       <div id="carouselExampleAutoplaying" class="carousel slide carousel-dark" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active" data-mdb-interval="1000">
-            <div style="background-color: #ffd866; height: 500px; width: auto">
+            <div style="background-color: #ffd866; height: 500px; width: auto; border-radius: 20px">
               <h1 class="caption">Project 1</h1>
             </div>
           </div>
           <div class="carousel-item" data-mdb-interval="1000">
-            <div style="background-color: #a9dc76; height: 500px; width: auto">
+            <div style="background-color: #a9dc76; height: 500px; width: auto; border-radius: 20px">
               <h1 class="caption">Project 2</h1>
             </div>
           </div>
           <div class="carousel-item" data-mdb-interval="1000">
-            <div style="background-color: #ab9df2; height: 500px; width: auto">
+            <div style="background-color: #ab9df2; height: 500px; width: auto; border-radius: 20px">
               <h1 class="caption">Project 3</h1>
             </div>
           </div>
@@ -141,8 +151,60 @@
     <!-- SOCIALS -->
 
     <div id="Socials" name="Socials">
-      <h1>Looking forward to<br />work with you!</h1>
+      <h1>Looking forward to<br />work with you</h1>
       <br /><br />
+
+      <!-- form -->
+      <p>Got any questions? Send me a message!</p>
+      <div class="form-container">
+        <form class="row g-3">
+          <div class="col-12">
+            <!-- <label for="inputName" class="form-label">Name</label> -->
+            <input type="text" class="form-control" id="Name" placeholder="Name" />
+          </div>
+          <div class="col-md-6">
+            <!-- <label for="inputEmail" class="form-label">Email</label> -->
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email address" />
+          </div>
+          <div class="col-md-6">
+            <!-- <label for="inputPhoneNum" class="form-label">Phone Number</label> -->
+            <input type="tel" class="form-control" id="inputPhoneNum" placeholder="Phone number" />
+          </div>
+          <div class="col-12">
+            <!-- <label for="inputMessage" class="form-label">Inquiry</label> -->
+            <textarea rows="4" cols="102" name="comment" form="usrform">   Inquiry...</textarea>
+          </div>
+          <!-- <div class="col-md-6">
+            <label for="inputCity" class="form-label">City</label>
+            <input type="text" class="form-control" id="inputCity" />
+          </div> -->
+          <!-- <div class="col-md-4">
+            <label for="inputState" class="form-label">State</label>
+            <select id="inputState" class="form-select">
+              <option selected>Choose...</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="inputZip" class="form-label">Zip</label>
+            <input type="text" class="form-control" id="inputZip" />
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck" />
+              <label class="form-check-label" for="gridCheck"> Check me out </label>
+            </div>
+          </div> -->
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+
+      <!--  form ends -->
+
+      <br /><br />
+      <h2>Or find me at:</h2>
       <p>callista.arv@gmail.com<br />+60 196-738-810 (Whatsapp)</p>
       <div id="Socials-flex">
         <div>
@@ -162,7 +224,7 @@
     <!-- FOOTER -->
 
     <footer id="Foot">
-      <p>Callista Aura Vanya ✦ 2023</p>
+      <p>✦ © Callista Aura Vanya 2023 ✦</p>
     </footer>
 
     <!-- scripts -->
