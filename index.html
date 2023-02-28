@@ -12,41 +12,64 @@
   <!-- css -->
   <link rel="stylesheet" href="./style.css" />
 
-  <!-- NAVBAR -->
-  <nav>
-    <div id="Nav">
-      <div>
-        <ul>
-          <li><a href="#">Home</a></li>
-          ✦
-          <li><a href="#About">About Me</a></li>
-          ✦
-          <li><a href="#Project">Projects</a></li>
-          ✦
-          <li><a href="#Socials">Socials</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <!-- CURSOR -->
+
+  <div class="curzr" hidden>
+    <div class="curzr-dot"></div>
+  </div>
 
   <body>
+    <!-- data-bs-spy="scroll" data-bs-target="#Nav" data-bs-smooth-scroll="true" tabindex="0" -->
     <!-- HOME -->
-    <div id="Home">
+    <div id="Home" name="Home">
       <!-- <img src="images/Home-Background.png" alt="sun-img" class="sun-1"> -->
-      <h1>CALLISTA AURA VANYA</h1>
-      <h2>
-        <ul>
-          <li><a href="#Project">Freelance Web Developer.</a></li>
-          <li><a href="#Project">Programmer.</a></li>
-          <li><a href="#Project">Self-taught Artist.</a></li>
+      <div class="container">
+        <h1>CALLISTA AURA VANYA</h1>
+      </div>
+      <h2 class="container2">
+        <ul class="anim">
+          <li><a href="#Project" class="webDev">Freelance Web Developer.</a></li>
+          <li><a href="#Project" class="programmer">Programmer.</a></li>
+          <li><a href="#Project" class="artist">Self-taught Artist.</a></li>
         </ul>
       </h2>
 
-      <a href="#Nav" id="toTop" title="Go back to top">↑</a>
+      <!-- <div class="wrap">
+        <img src="./images/icons-down-arrow.png" id="arrow" class="animated bounce" />
+      </div> -->
     </div>
 
+    <!-- NAVBAR -->
+    <nav class="sticky-top">
+      <div id="Nav">
+        <div>
+          <ul>
+            <!-- class="nav nav-pills" -->
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            ✦
+            <li><a class="nav-link" href="#About">About Me</a></li>
+            ✦
+            <li><a class="nav-link" href="#Project">Projects</a></li>
+            ✦
+            <li><a class="nav-link" href="#Socials">Socials</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- <nav id="Nav" class="navbar bg-body-tertiary">
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link" href="#Home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#About">About</a>
+        </li>
+      </ul>
+    </nav> -->
+
     <!-- ABOUT ME -->
-    <div id="About">
+    <div id="About" name="About">
       <div class="about-flex">
         <div>
           <h1>✦ABOUT ME</h1>
@@ -56,16 +79,47 @@
           </p>
         </div>
         <div>
-          <img src="images/My-Photo.png" alt="myPhoto" class="myPhoto" />
+          <img src="./images/Home-Background.png" alt="myPhoto" class="myPhoto" />
         </div>
       </div>
     </div>
 
-    <!-- WORKS -->
+    <!-- SCROLL TO TOP -->
+    <a class="toTop" title="Go back to top">↑</a>
 
-    <div id="Project">
+    <!-- PROJECTS  -->
+
+    <div id="Project" name="Project">
       <h1>✦ Projects ✦</h1>
-      <div id="flex">
+
+      <div id="carouselExampleAutoplaying" class="carousel slide carousel-dark" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-mdb-interval="1000">
+            <div style="background-color: #ffd866; height: 500px; width: auto">
+              <h1 class="caption">Project 1</h1>
+            </div>
+          </div>
+          <div class="carousel-item" data-mdb-interval="1000">
+            <div style="background-color: #a9dc76; height: 500px; width: auto">
+              <h1 class="caption">Project 2</h1>
+            </div>
+          </div>
+          <div class="carousel-item" data-mdb-interval="1000">
+            <div style="background-color: #ab9df2; height: 500px; width: auto">
+              <h1 class="caption">Project 3</h1>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- <div id="flex">
         <div>
           <h3>Project 1</h3>
         </div>
@@ -81,26 +135,26 @@
         <div>
           <h3>Project 4</h3>
         </div>
-      </div>
+      </div> -->
     </div>
 
     <!-- SOCIALS -->
 
-    <div id="Socials">
+    <div id="Socials" name="Socials">
       <h1>Looking forward to<br />work with you!</h1>
       <br /><br />
       <p>callista.arv@gmail.com<br />+60 196-738-810 (Whatsapp)</p>
       <div id="Socials-flex">
         <div>
-          <a href="https://github.com/callraV" target="_blank"><img src="images/GitHub.png" alt="GitHub" class="Socials-logo" /></a>
+          <a href="https://github.com/callraV" target="_blank"><img src="./images/GitHub.png" alt="GitHub" class="Socials-logo" /></a>
         </div>
 
         <div>
-          <a href="https://www.linkedin.com/in/callista-aura-vanya/" target="_blank"><img src="images/Linkedin.png" alt="Linkedin" class="Socials-logo" /></a>
+          <a href="https://www.linkedin.com/in/callista-aura-vanya/" target="_blank"><img src="./images/Linkedin.png" alt="Linkedin" class="Socials-logo" /></a>
         </div>
 
         <div>
-          <a href="https://www.instagram.com/cryolitte/" target="_blank"><img src="images/Instagram.png" alt="Instagram" class="Socials-logo" /></a>
+          <a href="https://www.instagram.com/cryolitte/" target="_blank"><img src="./images/Instagram.png" alt="Instagram" class="Socials-logo" /></a>
         </div>
       </div>
     </div>
@@ -110,5 +164,9 @@
     <footer id="Foot">
       <p>Callista Aura Vanya ✦ 2023</p>
     </footer>
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
