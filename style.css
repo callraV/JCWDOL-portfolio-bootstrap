@@ -596,6 +596,12 @@ img {
   background: #ffd866;
 }
 
+.zoom-transition {
+  display: flex;
+  animation: zoom-out 2s;
+  animation-delay: 3s;
+}
+
 @keyframes move {
   from {
     transform: translateY(-100%);
@@ -611,5 +617,14 @@ img {
   }
   to {
     transform: translateY(100%);
+  }
+}
+
+@keyframes zoom-out {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(15, 0);
   }
 }
